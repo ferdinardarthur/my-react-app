@@ -1,9 +1,10 @@
 import React from 'react';
 import {View, Text, Image, TouchableOpacity, Pressable} from "react-native";
 import { AntDesign } from '@expo/vector-icons'; 
-const Login = ({navigation}) => {
 
-    return (
+export function Login ({navigation}) {
+
+return (
     <View 
     style={{ 
         flex: 1, 
@@ -27,7 +28,7 @@ const Login = ({navigation}) => {
     <Pressable
     android_ripple
     onPress={()=>{
-        navigation.navigate("Home")
+        navigation.navigate("Products")
     }}
         style={{
             backgroundColor: "grey",
@@ -44,7 +45,7 @@ const Login = ({navigation}) => {
     </Pressable>
     <TouchableOpacity
      onPress={()=> {
-        navigation.navigate("Home")
+        navigation.navigate("Products")
      }}
         activeOpacity={0.8}
         style={{
@@ -68,6 +69,5 @@ const Login = ({navigation}) => {
     </Text>
     </TouchableOpacity>
     </View>
-    );
+    )
 }
-export default Login
